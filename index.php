@@ -2,6 +2,12 @@
 include('config/app.php');
 include('html/header.php');
 include('fct/item.php');
+
+//--Vérification de l'existence de nom du fichier
+if(!file_exists(FILE_NAME)){
+  file_put_contents(FILE_NAME, serialize([]));
+}
+
 ?>
 
         <!-- /.row -->
@@ -23,11 +29,12 @@ include('fct/item.php');
                 <!-- Liste -->
                 <ul class="todo-list " data-widget="todo-list">
                 <?=
-                  $items = getItems();
+                  $items = getItems(); 
                   
-                  foreach($items as $item){
-                    echo displayItem($items);
+                  foreach ($items as $item) {
+                    echo displayItem($item);
                   }
+                 // echo "Debug Output: " . var_dump($items);
                   
                 ?>
                 </ul>

@@ -8,13 +8,7 @@
 
     $intitule=post('intitule');
     //--
-//--Sérialisation pour le stockage de donnée dans un fichier, comme txt
-
-    //--Vérification de l'existence de nom du fichier
-    if(!file_exists(FILE_NAME)){
-        file_put_contents(FILE_NAME, serialize([]));
-    }
-
+//--Sérialisation pour le stockage de donnée dans un fichier, comme .txt
     //--Récupération de la valeur entrée "intitule"
     $items = getItems();
     $items[]= [
