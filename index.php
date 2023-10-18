@@ -30,12 +30,13 @@ if(!file_exists(FILE_NAME)){
                 <ul class="todo-list " data-widget="todo-list">
                 <?=
                   $items = getItems(); 
-                  
-                  foreach ($items as $item) {
-                    echo displayItem($item);
+                  //--
+                  //Réferencé par le key
+
+                  foreach ($items as $key => $item) {
+                    echo displayItem($key, $item);
                   }
-                 // echo "Debug Output: " . var_dump($items);
-                  
+                 
                 ?>
                 </ul>
               </div>

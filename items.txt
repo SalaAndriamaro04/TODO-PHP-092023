@@ -1,0 +1,1 @@
+a:3:{s:13:"652f91f179a29";a:2:{s:7:"checked";b:0;s:8:"intitule";s:5:"Item1";}s:13:"652f91f496580";a:2:{s:7:"checked";b:0;s:8:"intitule";s:5:"Item2";}s:13:"652f91f8189d2";a:2:{s:7:"checked";b:1;s:8:"intitule";s:5:"Item3";}}

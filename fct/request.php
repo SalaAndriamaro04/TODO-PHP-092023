@@ -12,5 +12,16 @@ function post($name, $default=null){
     }
 
 }
-    
+
+//--
+//--Récupération de l'id dans le lien
+
+function get($name, $default=null){
+    if(isset($_GET[$name])){
+        return htmlentities($_GET[$name]);
+    }else{
+        return $default;
+    }
+
+}
 

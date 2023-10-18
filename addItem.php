@@ -11,16 +11,18 @@
 //--Sérialisation pour le stockage de donnée dans un fichier, comme .txt
     //--Récupération de la valeur entrée "intitule"
     $items = getItems();
-    $items[]= [
-        'cheked' => false,
+
+    //c'est un tableau associatif
+    $items[uniqid()]= [
+        'checked' => false,
         'intitule' => $intitule
     ];
     
-    file_put_contents(FILE_NAME, serialize($items));
+    saveItems($items);
 
 
     //--
-    //-- Après Traitement nouvel item
+    //-- Après Traitement de nouvel item
     header('Location:index.php')
 
 ?>
