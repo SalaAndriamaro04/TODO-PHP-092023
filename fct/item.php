@@ -1,6 +1,11 @@
 <?php
     //--Affichage items 
     function displayItem($key, $item){
+        $editItemId = get('editItem');
+        if($editItemId===$key){
+            $html = '<form action="editItem.php" method="POST"></form>';
+            $html = '</form>';
+        }else{
         $html =   '<li class="'. 
                     //Test pour activer le css de class 'done' lors du cochage
 
@@ -24,10 +29,15 @@
                     <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
                     <!-- General tools such as edit or delete-->
                     <div class="tools">
-                    <i class="fas fa-edit"></i>
-                    <i class="fas fa-trash-o"></i>
+                    <a href="index.php?editItem='.$key.'">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="deleteItem.php?item='.$key.'">
+                        <i class="fas fa-trash"></i>
+                    </a>
                     </div>
                 </li>';
+            }     
         return $html;
     }
     

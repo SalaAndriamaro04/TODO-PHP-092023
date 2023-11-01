@@ -2,6 +2,7 @@
 include('config/app.php');
 include('html/header.php');
 include('fct/item.php');
+include('fct/request.php');
 
 //--Vérification de l'existence de nom du fichier
 if(!file_exists(FILE_NAME)){
