@@ -3,8 +3,17 @@
     function displayItem($key, $item){
         $editItemId = get('editItem');
         if($editItemId===$key){
-            $html = '<form action="editItem.php" method="POST"></form>';
-            $html = '</form>';
+            $html='<form action="editItem.php" method="POST">';
+            $html.='<input type="hidden" name="editItem" value="'.$key.'">';
+            $html.='<div class="input-group input-group-sm">
+                        <input type="text" class="form-control" name="intitule" value="'.$item['intitule'].'">
+                        <span class="input-group-append">
+                        <button type="submit" class="btn btn-info btn-flat">
+                        OK
+                        </button>
+                        </span>
+                    </div>';
+            $html.='</form>';
         }else{
         $html =   '<li class="'. 
                     //Test pour activer le css de class 'done' lors du cochage

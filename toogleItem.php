@@ -19,6 +19,6 @@ include('fct/request.php');
 
     //--
     //-- Après Traitement de nouvel item
-    header('Location:index.php')
+    header('Location:index.php');
 
 ?>

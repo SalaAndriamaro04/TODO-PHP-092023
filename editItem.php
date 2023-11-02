@@ -4,21 +4,17 @@ include('config/app.php');
 include('fct/request.php');
 
     $items=getItems();
-    $id= get('item');
-   
-    //foreach($items as $item){
-    //    if($item['id']===$id){
-            
-    //        $item['checked']= !$item['checked'];
-    //        var_dump($item);
-    //    }
-    //}
 
-    $items[$id]['checked'] = !$items[$id]['checked'];
+    //Récupération valeur editItem portant le key de la valeur à modifier
+    $id= post('editItem');
+
+    $items[$id]['intitule'] = post('intitule');
+    
     saveItems($items);
+
 
     //--
     //-- Après Traitement de nouvel item
-    header('Location:index.php')
+    header('Location:index.php');
 
 ?>

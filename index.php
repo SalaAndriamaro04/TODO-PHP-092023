@@ -30,7 +30,7 @@ if(!file_exists(FILE_NAME)){
                 <!-- Liste -->
                 <ul class="todo-list " data-widget="todo-list">
                 <?=
-                  $items = getItems(); 
+                  $items = getItems();
                   //--
                   //Réferencé par le key
 
