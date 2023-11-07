@@ -3,7 +3,7 @@
 Front: Template AdminLTE 
 site: https://fontawesome.io/
 
-Back: Php
+Back-end: Php
 
 -->
 <html lang="en">

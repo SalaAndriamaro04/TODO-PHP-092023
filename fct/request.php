@@ -1,5 +1,4 @@
 <?php
-
 //--
 //--Vérification si la valeur entrée correspond à ce que le développeur voulait, 
 //--pour éviter des attaques comme des scripts
@@ -25,3 +24,4 @@ function get($name, $default=null){
 
 }
 
+?>
