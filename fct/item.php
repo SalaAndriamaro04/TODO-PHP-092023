@@ -35,8 +35,6 @@
                         <span class="text">'.
                         $item['intitule']
                         .'</span>
-                        <!-- Emphasis label -->
-                        <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
                         <!-- General tools such as edit or delete-->
                         <div class="tools">
                         <a href="index.php?editItem='.$key.'">
